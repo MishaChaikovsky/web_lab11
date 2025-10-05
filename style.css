@@ -1,0 +1,124 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#and{color: red;}
+
+header h1{
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+nav button{
+    width: calc(50% - 15px);
+    outline: 0;
+    border: 0;
+    background-color: rgb(202, 202, 202);
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px ;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+nav button:hover{
+    background-color: rgb(126, 126, 126);
+    transform: scale(1.01);
+}
+
+.items{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+.items .item{
+    width: 100%;
+    outline: 1px solid #342;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.items .item:hover{
+    transform: scale(1.02);
+    box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.items .item img{
+    width: 100%;
+    max-height: 150px;
+    background-origin: top;
+    perspective-origin: top;
+    object-fit: cover;
+    object-position: top; 
+}
+
+.items .item .info{
+    text-align: center;
+    padding: 5px 0 10px;
+}
+
+.items .item .info .name{
+    font-weight: 700;
+}
+
+footer{
+    text-align: center;
+    margin: 20px;
+}
+
+@media screen and (width > 700px){
+    header h1{
+        font-size: 32px;
+    }
+
+    nav button,
+    .items .item{
+        width: calc(50% - 15px);
+    }
+}
+
+@media screen and (width > 1000px){
+    nav button,
+    .items .item{
+        width: calc(33% - 15px);
+    }
+}
+
+@media screen and (width > 1300px){
+    main{
+        display: flex;
+        flex-flow: row-reverse;
+    }
+
+    .items{
+        padding-right: 0;
+    }
+
+    nav {
+        width: 30%;
+        padding: 10px 20px 10px 0;
+    }
+
+    nav button{
+        width: 100%;
+    }
+}
